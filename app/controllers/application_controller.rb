@@ -4,6 +4,22 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  # code actions here!
+  get "/recipes" do
+    erb :index
+  end
+
+  get "/recipes/new" do
+    erb :new
+  end
+
+  post "recipes/new" do
+    if params[:name] == ""
+      redirect  "/new"
+    else
+      @recipe = Recipe.new(:name => params[:name], :ingredients => params[:ingredients], :cook_time => params[:cook_time])
+      redirect "/recipe"
+    end
+  end
+
 
 end
