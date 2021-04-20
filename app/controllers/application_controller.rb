@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  post "recipes/new" do
+  post "/recipes/new" do
     if params[:name] == ""
       redirect  "/new"
     else
