@@ -9,7 +9,7 @@
     <h1>RECIPE TIME</h1>
 
     <% @recipes.each do |recipe| %>
-      <p><a href="/recipes/#{recipe.id}"><%= recipe.name %></a></p>
+      <p><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a></p>
     <% end %>
 
   </body>
