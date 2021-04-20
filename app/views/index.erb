@@ -8,9 +8,9 @@
   <body>
     <h1>RECIPE TIME</h1>
 
-    <% @articles.each do |article| %>
-    <p>Title: <%= article.title %></p>
-    <p>Content: <%= article.content %></p>
+    <% @recipes.each do |recipe| %>
+    <p>Title: <%= recipe.name %></p>
+    <p><a href="/recipes/#{recipe.id}">Link Here</a></p>
     <% end %>
 
   </body>
